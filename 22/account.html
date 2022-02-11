@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <title>Login / Sign Up Form</title>
+    <link rel="shortcut icon" href="/assets/favicon.ico">
+    <link rel="stylesheet" href="style.css">
+
+
+</head>
+<body style="background-image: url(Other/bg1.jpg);">
+
+    <center>
+        <header class="header">
+
+            <nav class="navbar navbar-style">
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#micon">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+
+                        <a href="index.html" style="text-decoration: none;">
+
+                            <h3 class="title1">Sheesha Shop</h3>
+            
+                        </a>
+                    </div>
+                    
+                    <div class="collapse navbar-collapse" id="micon">
+                        <ul class="nav navbar-nav navbar-right">
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="cart.html">Cart</a></li>
+                            <li><a href="account.html">Account</a></li>
+                            <li><a href="contact_us.html">Contact Us</a></li>
+                            <li><a href="about_us.html">About Us</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+
+
+            <div class="container2L">
+                
+                <form class="form" id="login">
+                    <h2 class="form__title">Login</h2>
+                    <hr>
+                    <br>
+                    <div class="form__message form__message--error"></div>
+                    <div class="form__input-group">
+                        <input type="text" class="form__input" autofocus placeholder="Username or email">
+                        <div class="form__input-error-message"></div>
+                    </div>
+                    
+                    <div class="form__input-group">
+                        <input type="password" class="form__input" autofocus placeholder="Password">
+                        <div class="form__input-error-message"></div>
+                    </div>
+                    
+                    <button class="form__button" type="submit">Continue</button>
+                    <br>
+                    <p class="form__text">
+                        <a href="#" class="form__link">Forgot your password?</a>
+                    </p>
+                    <br>
+                    <p class="form__text">
+                        <a class="form__link" href="./" id="linkCreateAccount">Don't have an account? Create account</a>
+                    </p>
+                    <br>
+
+                </form>
+
+                <form class="form form--hidden" id="createAccount">
+                    <h2 class="form__title">Create Account</h2>
+                    <hr>
+                    <br>
+                    <div class="form__message form__message--error"></div>
+                    <div class="form__input-group">
+                        <input type="text" id="signupUsername" class="form__input" autofocus placeholder="Username">
+                        <div class="form__input-error-message"></div>
+                    </div>
+                    <div class="form__input-group">
+                        <input type="text" class="form__input" autofocus placeholder="Email Address">
+                        <div class="form__input-error-message"></div>
+                    </div>
+                    <div class="form__input-group">
+                        <input type="password" class="form__input" autofocus placeholder="Password">
+                        <div class="form__input-error-message"></div>
+                    </div>
+                    <div class="form__input-group">
+                        <input type="password" class="form__input" autofocus placeholder="Confirm password">
+                        <div class="form__input-error-message"></div>
+                    </div>
+                    <button class="form__button" type="submit">Continue</button>
+                    <p class="form__text">
+                        <a class="form__link" href="./" id="linkLogin">Already have an account? Sign in</a>
+                    </p>
+                    <br>
+                </form>
+            </div>
+
+            <style>
+
+            .container2L {
+                width: 90%;
+                height: max-content;
+                background:white;
+                border-radius: 6px;
+                justify-content: center;
+                margin: 25px 0px;
+                box-shadow: 10px 10px 25px rgba(0, 0, 0, 0.226);
+            }
+
+            .container2L,
+            .form__input,
+            .form__button {
+                font: 'Varela Round', sans-serif;
+            }
+
+            .form--hidden {
+                display: none;
+            }
+
+            .form > *:first-child {
+                margin-top: 0;
+            }
+
+            .form > *:last-child {
+                margin-bottom: 0;
+            }
+
+            h2{
+                font-size: 40px;
+                color: black;
+                padding:50px 15px 15px 15px; 
+                border-radius:30px;
+            }
+
+            h2:hover{
+                transition: .5s;
+                color: rgb(32, 98, 208);
+            }
+
+            .form__message {
+                text-align: center;
+                margin-bottom: 1rem;
+            }
+
+            .form__message--success {
+                color: green;
+            }
+
+            .form__message--error {
+                color: red;
+            }
+
+            .form__input-group {
+                margin-bottom: 1rem;
+            }
+
+            .form__input {
+                border-radius: 6px;
+                width: 380px;
+                height: 50px;
+                padding: 5px 5px 5px 15px;
+            }
+
+            .form__input:focus {
+                background: #ffffff;
+            }
+
+            .form__input--error {
+                color: red;
+                border-color: var(--color-error);
+            }
+
+            .form__input-error-message {
+                margin-top: 0.5rem;
+                font-size: 0.85rem;
+                color: red;
+            }
+
+            .form__button {
+                width: 380px;
+                background-color: white;
+                margin: 20px auto;
+                text-transform: uppercase;
+                border-style: solid;
+                border-width: 2px;
+                border-color: rgb(32, 98, 208);
+                margin-bottom: 30px;
+                border-radius: 6px;
+                font-weight: bold;
+            }
+
+            .form__button:hover {
+                background: var(--color-primary-dark);
+                transition: 0.3s;
+                background-color: rgb(32, 98, 208) ;
+                color: white;
+                box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.226);
+            }
+
+            .form__button:active {
+                transform: scale(0.98);
+                background-color: rgb(32, 98, 208);
+            }
+
+            .form__text {
+                text-align: center;
+            }
+
+            .form__link {
+                color: var(--color-secondary);
+                text-decoration: none;
+                cursor: pointer;
+            }
+
+            .form__link:hover {
+                text-decoration: underline;
+            }
+            </style>
+
+        </header>
+    </center>
+    <script src="./src/main.js"></script>
+</body>

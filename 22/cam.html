@@ -1,0 +1,143 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+  <title>SEESHA</title>
+  <link rel="stylesheet" href="style.css">
+
+</head>
+
+<style>
+
+.top-container {
+  width: 500px;
+  margin: 30px auto;
+}
+
+.btn {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 5px;
+}
+
+.btn-dark {
+  background: #333;
+  color: #fff;
+  border: #666 1px solid;
+}
+
+.btn-light {
+  background: #f4f4f4;
+  color: #333;
+  border: #ccc 1px solid;
+}
+
+.select {
+  height: 40px;
+  background: #333;
+  color: #fff;
+  padding: 3px;
+  width: 100%;
+  border: 1px #666 solid;
+  margin-bottom: 10px;
+}
+
+.bottom-container {
+  max-width: 960px;
+  margin: auto;
+  padding: 10px;
+}
+
+
+#photos {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 10px;
+}
+
+
+#photos img {
+  width: 0%;
+  border: 0px #fff solid;
+}
+
+#canvas {
+  display: none;
+}
+</style>
+
+<body style="background-color:rgb(204, 204, 209);">
+  <center>
+  <header class="header">
+
+      <!------------------- navbar ---------------->
+
+      <nav class="navbar navbar-style">
+          <div class="container-fluid">
+              <div class="navbar-header">
+                  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#micon">
+                      <span class="icon-bar"></span>
+                      <span class="icon-bar"></span>
+                      <span class="icon-bar"></span>
+                  </button>
+
+                  <a href="index.html" style="text-decoration: none;">
+
+                      <h3>Sheesha Shop</h3>
+      
+                  </a>
+              </div>
+              
+              <div class="collapse navbar-collapse" id="micon">
+                  <ul class="nav navbar-nav navbar-right">
+                      <li><a href="index.html"><u>Home</u></a></li>
+                      <li><a href="cart.html">Cart</a></li>
+                      <li><a href="account.html">Account</a></li>
+                      <li><a href="contact_us.html">Contact Us</a></li>
+                      <li><a href="about_us.html">About Us</a></li>
+                  </ul>
+              </div>
+          </div>
+      </nav>
+
+      <div class="container2">
+        <div class="top-container">
+          <video id="video">Stream not available...</video>
+          
+          <button id="photo-button" class="btn btn-dark">Take Photo</button>
+      
+          <select id="photo-filter" class="select">
+            <option value="none">Take a trial</option>
+            <option value="grayscale(100%)">Grey T-Shirt</option>
+            <option value="sepia(100%)">Black T-Shirt</option>
+            <option value="invert(100%)">White T-Shirt</option>
+          </select>
+      
+          <button id="buy-button" class="btn btn-light">Buy</button>
+          <button id="addtocart-button" class="btn btn-light">Add to Cart</button>
+          <button id="clear-button" class="btn btn-light">Clear</button>
+
+          <canvas id="canvas"></canvas>
+        </div>
+
+      </div>
+    
+      <div class="bottom-container">
+        <div id="photos"></div>
+      </div>
+
+      <script src="js/main.js"></script>
+
+</body>
+</html>
